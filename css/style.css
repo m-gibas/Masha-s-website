@@ -66,11 +66,33 @@ body {
   height: 0;
 }
 
-.hexagon1 img {
+.hexagon {
+  text-align: center;
+}
+
+.hexagon img {
   /* background: url("../images/HexagonPolishDepartment.png"); */
   object-fit: cover;
 }
 
-.hexagon1 img:hover {
+.hexagon:hover {
   background: url("../images/HexagonWhite.png");
+}
+
+.hexagon:hover .hexagon-img {
+  opacity: 0;
+}
+
+.hexagon-text {
+  font-size: 2rem;
+  font-weight: 500;
+  width: min-content;
+  display: none;
+  position: absolute;
+  color: #000000;
+  transform: translate(-2.5vw, -20vh);
+}
+
+.hexagon:hover .hexagon-text {
+  display: unset;
 }
