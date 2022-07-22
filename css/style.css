@@ -36,12 +36,37 @@ body {
   color: white;
 }
 
+h1 {
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+  font-size: 36px;
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
 .right-vector-text {
   position: absolute;
   width: max-content;
   top: 75%;
   left: 75%;
   transform: translate(-75%, -75%);
+}
+
+.right-vector-text span {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  text-shadow: 10px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+#copy-sign {
+  color: #000000;
+  font-weight: 600;
+  text-shadow: none;
 }
 
 /* :root {
@@ -67,11 +92,18 @@ body {
 }
 
 .hexagon {
+  clip-path: polygon(2% 18%, 50% 0, 98% 18%, 98% 78%, 50% 100%, 2% 78%);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hexagon-shadow {
+  filter: drop-shadow(-0.5rem -0.5rem 0.5rem rgb(0 0 0 / 10%));
 }
 
 .hexagon img {
-  /* background: url("../images/HexagonPolishDepartment.png"); */
   object-fit: cover;
 }
 
@@ -84,15 +116,25 @@ body {
 }
 
 .hexagon-text {
-  font-size: 2rem;
-  font-weight: 500;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+
   width: min-content;
   display: none;
   position: absolute;
   color: #000000;
-  transform: translate(-2.5vw, -20vh);
 }
 
 .hexagon:hover .hexagon-text {
   display: unset;
+}
+
+.shape {
+  width: 10rem;
+  height: 10rem;
+  rotate: (45 0 0);
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #000000;
 }
