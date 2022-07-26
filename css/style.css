@@ -52,7 +52,7 @@ body {
 
 .right-vector {
   right: 0%;
-  bottom: 0%;
+  bottom: -0.5%;
   margin: 0;
   padding: 0;
   position: fixed;
@@ -119,16 +119,11 @@ h1 {
 }
 
 .mobile-break {
-  flex-basis: unset;
-  height: unset;
+  display: none;
 }
 
 .wrapHexagon {
-  /* width: 30%;
-  height: 80%; */
   position: relative;
-  /* clip-path: polygon(50% 4%, 96% 30%, 96% 70%, 52% 95%, 4% 70%, 4% 30%); */
-
   clip-path: url(#myClipPath);
 
   z-index: 100;
@@ -136,8 +131,8 @@ h1 {
 }
 
 .wrapHexagon:hover {
-  /* background-color: white; */
-  filter: opacity(1) drop-shadow(0 0 0 white);
+  background-color: white;
+  /* filter: opacity(1) drop-shadow(0 0 0 white); */
   cursor: pointer;
 }
 
@@ -180,8 +175,12 @@ img.imageInHexagon {
 }
 
 @media only screen and (max-width: 1462px) {
-  .break {
+  /* .break {
     display: none;
+  } */
+  .wrapHexagon {
+    width: 30%;
+    height: auto;
   }
 }
 
@@ -193,7 +192,12 @@ img.imageInHexagon {
     text-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
   }
 
+  .break {
+    display: none;
+  }
+
   .mobile-break {
+    display: unset;
     flex-basis: 100%;
     height: 0;
   }
@@ -207,7 +211,6 @@ img.imageInHexagon {
   }
 
   .wrapHexagon {
-    /* clip-path: none; */
     width: 40%;
     height: auto;
   }
